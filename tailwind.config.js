@@ -10,7 +10,7 @@ export default {
         'primary': {
           dark: '#232323',
           DEFAULT: '#232323',
-          light: '#FFEAC9',
+          light: '#FFFDF9',
         },
         'secondary': {
           dark:'#D9D18C',
@@ -18,8 +18,8 @@ export default {
           light: '#D9D18C',
         },
         'tertiary': {
-          dark:'#FFEAC9',
-          DEFAULT: '#FFEAC9',
+          dark:'#FFFDF9',
+          DEFAULT: '#FFFDF9',
           light: '#232323',
         }
       },
