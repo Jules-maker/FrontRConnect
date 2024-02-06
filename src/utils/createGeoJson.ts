@@ -1,15 +1,16 @@
 // TODO add type GeoJson
 /**
  * Create GeoJson from array of coordinates
- * @param {[number, number]} coordinates
+ * @param {number} lat - Latitude of the coordinate
+ * @param {number} lon - Longitude of the coordinate
  * @returns GeoJson
  */
-const createGeoJson = (coordinates: [number, number]) => {
+const createGeoJson = (lat: number, lon: number) => {
     return {
         type: 'Feature',
         geometry: {
             type: 'Point',
-            coordinates: coordinates
+            coordinates: [lon, lat]
         }
     };
 }
