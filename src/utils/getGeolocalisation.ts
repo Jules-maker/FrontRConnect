@@ -3,7 +3,7 @@
  * @returns {Promise<GeolocationPosition>}
  * @throws {Error} if the geolocalisation is not supported
  */
-const getGeolocalisation = () => {
+const getGeolocalisation = (): Promise<GeolocationPosition> => {
     return new Promise((resolve, reject) => {
         if(!navigator.geolocation) reject(new Error('Geolocalisation not supported'));
         navigator.geolocation.getCurrentPosition(resolve, reject);
