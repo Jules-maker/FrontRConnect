@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import getGeolocalisation from './utils/getGeolocalisation'
 import getDistanceBetweenCords from './utils/getDistanceBetweenCords'
+import ButtonComponent from './components/buttonComponent'
+import reactLogo from './assets/react.svg'
 
 function App() {
   const [dist, setDist] = useState(0)
@@ -29,7 +31,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
         <p>Distance {dist}</p>
-        <button onClick={handleClick}>get Geo</button>
+        <ButtonComponent label="Get Geo" handleClick={handleClick} icon={<img src={reactLogo} className="h-5 w-5" alt="React logo" />} />
       </div>
     </>
   )
