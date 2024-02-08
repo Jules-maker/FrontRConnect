@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import getGeolocalisation from './utils/getGeolocalisation'
 import getDistanceBetweenCords from './utils/getDistanceBetweenCords'
-import ButtonComponent from './components/buttonComponent'
 import reactLogo from './assets/react.svg'
+import ButtonComponent from './components/buttonComponent'
 
 function App() {
   const [dist, setDist] = useState(0)
