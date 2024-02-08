@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import './App.css'
 import getGeolocalisation from './utils/getGeolocalisation'
 import getDistanceBetweenCords from './utils/getDistanceBetweenCords'
 import reactLogo from './assets/react.svg'
-import ButtonComponent from './components/buttonComponent'
 import Cards, { CardsProps } from './components/CardsComponent'
 import ListView from './components/ListComponent'
+import ButtonComponent from './components/ButtonComponent'
 
 const cardsList:CardsProps[]  = [
   {
