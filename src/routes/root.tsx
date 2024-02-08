@@ -1,40 +1,27 @@
+import { NavLink, Outlet } from "react-router-dom";
+
 export default function Root() {
     return (
-      <>
-        <div id="sidebar">
-          <h1>React Router Contacts</h1>
-          <div>
-            <form id="search-form" role="search">
-              <input
-                id="q"
-                aria-label="Search contacts"
-                placeholder="Search"
-                type="search"
-                name="q"
-              />
-              <div
-                id="search-spinner"
-                aria-hidden
-                hidden={true}
-              />
-              <div
-                className="sr-only"
-                aria-live="polite"
-              ></div>
-            </form>
-            <form method="post">
-              <button type="submit">New</button>
-            </form>
-          </div>
+      <main className="h-screen w-screen pt-4 bg-primary-light dark:bg-primary-dark text-black dark:text-white">
+        <Outlet />
+        <div className="fixed bottom-0 left-0 z-50 w-full shadow-inner p-2">
           <nav>
-            <ul>
-              <li>
-                <a href={`/app`}>APP</a>
+            <ul className="grid grid-cols-4 gap-2" id="nav-menu">
+              <li className="p-1">
+                <NavLink to={`/`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Accueil</p></NavLink>
+              </li>
+              <li className="p-1">
+                <NavLink to={`/app`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Carte</p></NavLink>
+              </li>
+              <li className="p-1">
+                <NavLink to={`/app`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Restaurant</p></NavLink>
+              </li>
+              <li className="p-1">
+                <NavLink to={`/app`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Mon profil</p></NavLink>
               </li>
             </ul>
           </nav>
         </div>
-        <div id="detail"></div>
-      </>
+      </main>
     );
   }
