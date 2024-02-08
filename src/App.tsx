@@ -33,7 +33,7 @@ function App() {
         </p>
         <p>Distance {dist}</p>
         <ButtonComponent label="Get Geo" handleClick={handleClick} icon={<img src={reactLogo} className="h-5 w-5" alt="React logo" />} />
-        <Cards title="Card 1" imgSrc="https://source.unsplash.com/random/320x320" className='w-32 h-32'/>
+        <Cards title="Card 1" imgSrc="https://source.unsplash.com/random/320x320" className='w-32 h-32' to='#'/>
       </div>
     </>
   )
