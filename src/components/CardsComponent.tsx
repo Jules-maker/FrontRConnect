@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-interface CardsProps {
+export interface CardsProps {
     title?: string;
     to: string;
     imgSrc: string;
