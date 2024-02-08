@@ -19,9 +19,11 @@ interface ListViewProps<T> {
 const ListView = <T,>({className, items, renderItem}: ListViewProps<T>) => {
     return (
       <div className={`grid gap-2 ${className}`}>
-        {items.map((item) => 
-         renderItem(item) 
-        )}
+        {items.map((item, index) => (
+        <div key={index}>
+        {renderItem(item)}
+        </div>
+        ))}
       </div>
     );
   }
