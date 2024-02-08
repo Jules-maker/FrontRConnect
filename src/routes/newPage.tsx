@@ -2,7 +2,7 @@ import ButtonComponent from "../components/ButtonComponent";
 import { setVisitedWebSite } from "../utils/vistiedWebSite";
 
 
-const New = () => {
+const NewPage = () => {
     return (
         <div>
         <h1>New</h1>
@@ -18,4 +18,4 @@ const New = () => {
     );
     }
 
-export default New;
+export default NewPage;

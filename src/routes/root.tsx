@@ -11,13 +11,13 @@ export default function Root() {
                 <NavLink to={`/`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Accueil</p></NavLink>
               </li>
               <li className="p-1">
-                <NavLink to={`/app`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Carte</p></NavLink>
+                <NavLink to={`/map`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Carte</p></NavLink>
               </li>
               <li className="p-1">
-                <NavLink to={`/app`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Restaurant</p></NavLink>
+                <NavLink to={`/host`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Lieu</p></NavLink>
               </li>
               <li className="p-1">
-                <NavLink to={`/app`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Mon profil</p></NavLink>
+                <NavLink to={`/profil`} className="flex flex-col gap-1 items-center justify-center text-sm hover:text-secondary">(icon)<p>Mon profil</p></NavLink>
               </li>
             </ul>
           </nav>
