@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import getGeolocalisation from './utils/getGeolocalisation'
-import getDistanceBetweenCords from './utils/getDistanceBetweenCords'
-import reactLogo from './assets/react.svg'
-import Cards, { CardsProps } from './components/CardsComponent'
-import ListView from './components/ListComponent'
-import ButtonComponent from './components/ButtonComponent'
+import Cards, { CardsProps } from '../components/CardsComponent';
+import getGeolocalisation from '../utils/getGeolocalisation';
+import getDistanceBetweenCords from '../utils/getDistanceBetweenCords';
+import ButtonComponent from '../components/ButtonComponent';
+import ListView from '../components/ListComponent';
+import reactLogo from '../assets/react.svg';
 
 const cardsList:CardsProps[]  = [
   {
@@ -27,7 +27,7 @@ const cardsList:CardsProps[]  = [
   }
 ];
 
-function App() {
+function HomePage() {
   const [dist, setDist] = useState(0)
   
 
@@ -49,9 +49,6 @@ function App() {
     <>
       <h1 className='bold'>R-connect</h1>
       <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
         <p>Distance {dist}</p>
         <ButtonComponent label="Get Geo" handleClick={handleClick} icon={<img src={reactLogo} className="h-5 w-5" alt="React logo" />} />
         <Cards title="Card 1" imgSrc="https://source.unsplash.com/random/320x320" className='w-32 h-32' to='#'/>
@@ -61,4 +58,4 @@ function App() {
   )
 }
 
-export default App
+export default HomePage

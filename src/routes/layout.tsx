@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 
-export default function Root() {
+export default function Layout() {
     return (
       <main className="h-screen w-screen pt-4 bg-primary-light dark:bg-primary-dark text-black dark:text-white">
         <Outlet />

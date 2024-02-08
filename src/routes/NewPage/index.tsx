@@ -1,5 +1,5 @@
-import ButtonComponent from "../components/ButtonComponent";
-import { setVisitedWebSite } from "../utils/vistiedWebSite";
+import ButtonComponent from "../../components/ButtonComponent";
+import { setVisitedWebSite } from "../../utils/vistiedWebSite";
 
 
 const NewPage = () => {

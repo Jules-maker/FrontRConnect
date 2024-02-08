@@ -1,18 +1,23 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
-import App from './App.tsx'
-import Root from "./routes/root.tsx";
+
+// Pages
 import ErrorPage from './error-page.tsx';
+import Layout from './routes/layout.tsx';
+
+import NewPage from './routes/NewPage/index.tsx';
+import HomePage from './routes/HomePage.tsx';
+import MapPage from './routes/MapPage/index.tsx';
+import HostPage from './routes/HostPage/index.tsx';
+import ProfilPage from './routes/ProfilPage/index.tsx';
+
+// Utils
 import { isFirstVisite } from './utils/vistiedWebSite.ts';
-import NewPage from './routes/newPage.tsx';
-import MapPage from './routes/MapPage.tsx';
-import HostPage from './routes/HostPage.tsx';
-import ProfilPage from './routes/ProfilPage.tsx';
 
 // Add here the page to import and the route to use
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
     loader: async () => {
       // check if it's the first visite
@@ -24,7 +29,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <App />
+        element: <HomePage />
       },
       {
         path: '/map',
