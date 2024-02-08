@@ -4,6 +4,7 @@ import getGeolocalisation from './utils/getGeolocalisation'
 import getDistanceBetweenCords from './utils/getDistanceBetweenCords'
 import reactLogo from './assets/react.svg'
 import ButtonComponent from './components/buttonComponent'
+import Cards from './components/CardsComponent'
 
 function App() {
   const [dist, setDist] = useState(0)
@@ -32,6 +33,7 @@ function App() {
         </p>
         <p>Distance {dist}</p>
         <ButtonComponent label="Get Geo" handleClick={handleClick} icon={<img src={reactLogo} className="h-5 w-5" alt="React logo" />} />
+        <Cards title="Card 1" imgSrc="https://source.unsplash.com/random/320x320" className='w-32 h-32'/>
       </div>
     </>
   )
