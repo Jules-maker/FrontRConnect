@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#nav-menu a.active {
-    @apply text-secondary;
+#nav-menu a.active, #nav-menu a.active > svg {
+    @apply text-secondary fill-secondary;
 }
