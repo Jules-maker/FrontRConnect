@@ -37,7 +37,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/host',
-        element: <HostPage />
+        element: <HostPage />,
+      },
+      {
+        path: '/host/:id',
+        element: <HostPage />,
+        loader: async({params})=>{
+          const {id} =params;
+          return {
+            id
+          }
+        }
       },
       {
         path: '/profil',
