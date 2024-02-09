@@ -4,7 +4,7 @@ export default function Layout() {
   return (
     <main className="h-screen w-screen pt-4 bg-primary-light dark:bg-primary-dark text-black dark:text-white">
       <Outlet />
-      <div className="fixed bottom-0 left-0 z-50 w-full shadow-inner p-2">
+      <div className="fixed bottom-0 left-0 z-50 w-full shadow-inner p-2 bg-primary-light dark:bg-primary-dark">
         <nav>
           <ul className="grid grid-cols-4 gap-2" id="nav-menu">
             <li className="p-1">
