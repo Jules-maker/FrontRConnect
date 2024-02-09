@@ -9,19 +9,19 @@ import reactLogo from '../assets/react.svg';
 const cardsList:CardsProps[]  = [
   {
     title: 'Card 1',
-    to: '#',
+    to: '/host/1',
     imgSrc: 'https://source.unsplash.com/random/320x320',
     className: 'w-32 h-32'
   },
   {
     title: 'Card 2',
-    to: '#',
+    to: '/host/2',
     imgSrc: 'https://source.unsplash.com/random/320x320',
     className: 'w-32 h-32'
   },
   {
     title: 'Card 3',
-    to: '#',
+    to: '/host/3',
     imgSrc: 'https://source.unsplash.com/random/320x320',
     className: 'w-32 h-32'
   }
