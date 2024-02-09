@@ -1,13 +1,30 @@
 import { useLoaderData } from "react-router-dom";
+import Cards, { CardsProps } from "../../components/CardsComponent";
+import { useState } from "react";
+import HeaderComponent from "../../components/HeaderComponent";
+import SearchBarComponent from "../../components/SearchBarComponent";
+import ListView from "../../components/ListComponent";
 
 const HostPage = () => {
-    const { id } = useLoaderData() as { id: number };
+    const { cardsList } = useLoaderData() as { cardsList: CardsProps[] }; 
+
+    const [filteredData, setFilteredData] = useState<CardsProps[]>(cardsList);
+  
+  
+      const handleSearch = (filteredData: CardsProps[]) => {
+        setFilteredData(filteredData);
+      };
     return (
-        <div>
-        <h1>Host</h1>
-        {id && <p>{id} </p>}
+      <>
+        <HeaderComponent  title='R-Connect' />
+        <div className='p-4 flex flex-col gap-3'>
+          <SearchBarComponent data={cardsList} onSearch={handleSearch} itemToFilter={'title'}/>
+          <h2 className='bold text-black dark:text-white text-xl'>Nouveau Lieu</h2>
+          <ListView items={filteredData} renderItem={(item) => <Cards {...item} className='w-full rounded-md'/>} className='grid-cols-2 gap-4 overflow-auto'/>
+  
         </div>
-    );
-}
+      </>
+    )
+  }
 
 export default HostPage;
