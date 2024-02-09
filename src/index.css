@@ -5,3 +5,7 @@
 #nav-menu a.active, #nav-menu a.active > svg {
     @apply text-secondary fill-secondary;
 }
+
+/* input[type="search"]::-webkit-search-cancel-button {
+    
+} */
