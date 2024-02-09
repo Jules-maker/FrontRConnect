@@ -1,10 +1,13 @@
+import HeaderComponent from "../../components/HeaderComponent";
+import MapComponent from "../../components/MapComponent";
 
 const MapPage = () => {
+
     return (
-        <div>
-        <h1>Map</h1>
-       
-        </div>
+        <>
+        <HeaderComponent  title='R-Connect' />
+        <MapComponent />
+        </>
     );
     }
 
