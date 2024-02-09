@@ -12,6 +12,7 @@ import ProfilPage from './routes/ProfilPage/index.tsx';
 
 // Utils
 import { isFirstVisite } from './utils/vistiedWebSite.ts';
+import cardsList from './data.ts';
 
 // Add here the page to import and the route to use
 const router = createBrowserRouter([
@@ -29,7 +30,12 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />
+        element: <HomePage />,
+        loader: async()=> {
+          return {
+            cardsList: cardsList
+          }
+        }
       },
       {
         path: '/map',
@@ -38,17 +44,22 @@ const router = createBrowserRouter([
       {
         path: '/host',
         element: <HostPage />,
-      },
-      {
-        path: '/host/:id',
-        element: <HostPage />,
-        loader: async({params})=>{
-          const {id} =params;
+        loader: async()=>{
           return {
-            id
+            cardsList:cardsList
           }
         }
       },
+      // {
+      //   path: '/host/:id',
+      //   element: <HostPage />,
+      //   loader: async({params})=>{
+      //     const {id} =params;
+      //     return {
+      //       id
+      //     }
+      //   }
+      // },
       {
         path: '/profil',
         element: <ProfilPage />
